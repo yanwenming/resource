@@ -2,6 +2,7 @@
 # -*-coding:utf-8-*-
 
 # author:yanwenming
+# date:2020-06-30
 
 
 import unittest
@@ -20,11 +21,14 @@ print(sys.path)
 
 
 class YiChangBaobei(Init):
+    '''
+    用于工程师对某工单进行异常反馈操作
+    '''
     def test01_Login(self):
         '''工程师正常登录'''
         print ( '执行case1' )
-        url = self.default_url1+'v1/app/login'
-        param = {"mobile": self.mobile13, "code" : self.code}
+        url = self.default_url+'v1/app/login'
+        param = {"mobile": self.mobile, "code" : self.code}
         r = requests.post(url, param,verify=False)
         t.sleep(2)
         response1 = r.json()
@@ -42,11 +46,11 @@ class YiChangBaobei(Init):
 
     def test02_GetExceptionType( self ):
         '''获取异常报备类型数据'''
-        print( '\n 执行case2' )
-        url = self.default_url1+'v3/work-exception/get-exception-type'
-        param = {"access_token" : self.getToken(), "version_code" : '4.5.3.0', "master_no" : 'G180922347'}
+        print('\n 执行case2')
+        url = self.default_url+'v3/work-exception/get-exception-type'
+        param = {"access_token" : self.getToken(), "version_code" : self.version_code, "master_no" : self.master_no}
         r = requests.get(url, param, verify = False)
-        t.sleep( 2 )
+        t.sleep(2)
         response2 = r.json()
         d = response2['data']
         global b  #存取异常父类ID
@@ -58,12 +62,12 @@ class YiChangBaobei(Init):
 
     def test03_GetExceptionChildType (self):
         '''获取异常报备子类数据'''
-        print ( '执行case3' )
+        print('执行case3')
         for typeid in b:#获取子类ID
-            url = self.default_url1 + 'v3/work-exception/get-exception-child-type'
-            param = {"access_token": self.getToken (), "version_code" : '4.5.3.0' , "master_no" : 'G180922347',"type": typeid}
-            r = requests.get (url, param, verify = False)
-            t.sleep (2)
+            url = self.default_url + 'v3/work-exception/get-exception-child-type'
+            param = {"access_token": self.getToken(), "version_code": self.version_code, "master_no": self.master_no,"type": typeid}
+            r = requests.get(url, param, verify = False)
+            t.sleep(2)
             response3 = r.json()
             zilei = response3['data']
             print('父类 是 %s'% typeid)
@@ -72,14 +76,13 @@ class YiChangBaobei(Init):
             if zilei is not None:
                 for m in zilei.keys():
                     c.append(m)
-                    self.version_code = '4.5.3.0'
-                    url = self.default_url1 + 'v3/work-exception/exception-add?access_token=' + self.getToken () + '&version_code=' + self.version_code
-                    param = {'content' : 'Hi, welcome to Beijing 2020' , 'type' : typeid,'work_id' : 'TASK15912603310430' , 'child_type' : m}
-                    r = requests.post(url , param , verify = False)
-                    t.sleep ( 5 )
+                    url = self.default_url + 'v3/work-exception/exception-add?access_token=' + self.getToken() + '&version_code=' + self.version_code
+                    param = {'content' : 'Hi, welcome to Beijing 2020，day day up', 'type': typeid,'work_id': self.work_id, 'child_type' : m}
+                    r = requests.post(url, param, verify = False)
+                    t.sleep(5)
                     response4 = r.json()
-                    print ( response4 )
-                    self.assertEqual ( response4['message'] , 'success' )
+                    print(response4)
+                    self.assertEqual(response4['message'], 'success')
                 print(typeid+'包含具体的子类型是 %s'% c)
 
 
