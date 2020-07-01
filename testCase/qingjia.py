@@ -76,3 +76,6 @@ class YiChangBaobei ( Init ) :
             response3 = r.json ()
             print ( response3 )
 
+
+if __name__ == '__main__':
+    unittest.main(verbosity = 2)

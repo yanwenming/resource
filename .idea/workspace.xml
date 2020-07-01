@@ -2,9 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8f5606a-d9db-46dc-b5c4-8eea79d9ddc7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/testCase/qingjia.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testCase/token.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/token.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCase/qingjia.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/qingjia.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -29,8 +27,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCase/yichangbaofei.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret selection-end-line="61" />
+            <state relative-caret-position="372">
+              <caret line="88" selection-start-line="88" selection-end-line="89" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -38,8 +36,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/testCase/qingjia.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+            <state relative-caret-position="132">
+              <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
               <folding>
                 <element signature="e#84#99#0" expanded="true" />
               </folding>
@@ -73,7 +71,7 @@
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
+  <component name="ProjectFrameBounds" extendedState="7">
     <option name="x" value="149" />
     <option name="y" value="19" />
     <option name="width" value="1936" />
@@ -207,10 +205,11 @@
     </history-entry>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16280295" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.16280295" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -218,7 +217,7 @@
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" />
-      <window_info anchor="bottom" id="Run" order="6" visible="true" weight="0.4175705" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.4175705" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -244,15 +243,15 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/testCase/yichangbaofei.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret selection-end-line="61" />
+        <state relative-caret-position="372">
+          <caret line="88" selection-start-line="88" selection-end-line="89" selection-end-column="32" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/testCase/qingjia.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="34" column="24" selection-start-line="34" selection-start-column="24" selection-end-line="34" selection-end-column="24" />
+        <state relative-caret-position="132">
+          <caret line="62" column="58" selection-start-line="62" selection-start-column="58" selection-end-line="62" selection-end-column="58" />
           <folding>
             <element signature="e#84#99#0" expanded="true" />
           </folding>
