@@ -14,16 +14,16 @@ import datetime
 
 
 class JiaDianOrder ( Init ) :
-    '''用户从服务号登录，到预约订单'''
+    '''用户从服务号登录，到工程师完成订单'''
 
     def test1_tologin ( self ) :
         '''用户登录小程序/服务号'''
         url = self.default_url1 + "v2/user/login"
         param = {"mobile" : self.mobile1 , "code" : self.code , "qd_no" : self.qd_no1}
         r = requests.get ( url , param , verify = False)
-        response1 = r.json()
+        response1 = r.json ()
         # print('我是：',response1['data']['user_access_token'])
-        with open( 'token.txt' , 'w' ) as f :
+        with open ( 'token.txt' , 'w' ) as f :
             f.write ( response1['data']['user_access_token'] )
         sleep ( 1 )
 
@@ -61,20 +61,18 @@ class JiaDianOrder ( Init ) :
         # book_day=(now_time+datetime.timedelta(days=+25)).strftime("%Y-%m-%d")#设置预约时间
         addressid = self.getAddressid()
         url = self.default_url1 + "v2/order/add-order?qd_no="+self.qd_no1+"&district_id=1990&access_token=" + self.getToken()
-        if self.tag == 1:
-            # 此处的form data为家政单品
-            form_data = {"address_id" : int(addressid) , "order_source" : 2 , "carts" : [] , "goods" : [
+        #此处的form data为家政单品
+        form_data = {"address_id" : int(addressid) , "order_source" : 2 , "carts" : [] , "goods" : [
             {"goods_no" : "793511395600" , "activity_id" : 0 , "num" : 1 , "item_id" : "311" , "price" : "0.01" ,
              "goods_item_id" : "311" , "ref_no" : "sku05395949177948"}] , "redpacket_id" : "" ,
                      "book_day" : "" , "book_period" : "" , "user_remark" : "订单备注" ,
                      "mix_goods" : "" , "mix_book_day" : "" , "mix_book_period" : ""}
-        else:
-            # 此处的form data为家电单品
-            form_data = {"address_id" : int(addressid) , "order_source" : 2 , "carts" : [] , "goods" : [
-            {"goods_no" : "169857542500" , "activity_id" : 0 , "num" : 1 , "item_id" : "381" , "price" : "0.02" ,
-             "goods_item_id" : "381" , "ref_no" : "sku05278549732225"}] , "redpacket_id" : "" ,
-                     "book_day" : "" , "book_period" : "" , "user_remark" : "订单备注" ,
-                     "mix_goods" : "" , "mix_book_day" : "" , "mix_book_period" : ""}
+        # #此处的form data为家电单品
+        # form_data = {"address_id" : int(addressid) , "order_source" : 2 , "carts" : [] , "goods" : [
+        #     {"goods_no" : "169857542500" , "activity_id" : 0 , "num" : 1 , "item_id" : "381" , "price" : "0.02" ,
+        #      "goods_item_id" : "381" , "ref_no" : "sku05278549732225"}] , "redpacket_id" : "" ,
+        #              "book_day" : "" , "book_period" : "" , "user_remark" : "订单备注" ,
+        #              "mix_goods" : "" , "mix_book_day" : "" , "mix_book_period" : ""}
         data2 = json.dumps(form_data)
         data = {'data': data2,'qd_no':self.qd_no1, 'referee_no':''}
         respone = requests.post(url ,data,verify = False)
@@ -108,15 +106,18 @@ class JiaDianOrder ( Init ) :
 
     def test5_booktime( self ) :
         '''用户预约上门服务时间'''
-        sleep( 2 )
+        sleep ( 2 )
         url = self.default_url1 + '/v2/order/modify-date?access_token=' + self.getToken() + '&qd_no=' + self.qd_no1 + '&district_id=1990'
-        param = {"order_id" : self.getOrderid(), "date" : "2020-07-22" , "time" : "09:00-12:00" , 'type' : "" ,
+        param = {"order_id" : self.getOrderid(), "date" : "2020-07-21" , "time" : "09:00-12:00" , 'type' : "" ,
                  'confirm_type' : "", 'qd_no' : self.qd_no1}
         response = requests.post(url , param, verify = False)
         print (response)
         r = response.text
         status = json.loads(r)["status"]
         self.assertEqual( status , 200 )
+
+
+
 
 
 if __name__ == '__main__' :
