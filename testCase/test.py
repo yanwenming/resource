@@ -2,7 +2,7 @@
 # -*-coding:utf-8-*-
 
 # author:Yan Wenming
-# create time:2020-07-07
+# create time:2020-07-17
 
 import requests
 import unittest
@@ -13,7 +13,7 @@ import json
 import datetime
 
 
-class JiaDianOrder( Init ):
+class JiaDianOrder ( Init ) :
     '''用户从服务号登录，到预约订单'''
 
     def test1_tologin ( self ) :
@@ -32,31 +32,62 @@ class JiaDianOrder( Init ):
         with open( 'token.txt' , 'r' )as f:
             return f.read()
 
-    def test2_addaddress( self ):
-        '''用户创建服务地址'''
-        url = self.default_url1+"v2/user/add-address?"+"qd_no="+self.qd_no1+"&district_id=1997&access_token=" + self.getToken()
-        form_data = {'username' : '研发'+random.choice("深圳欢迎您南山宝安福田罗湖龙岗株洲长沙"), 'sex': '' , 'phone' : self.mobile1, 'province_id' : 1895, 'city_id' : 1987,
-                 'district_id' : 1990, 'address' : '梅沙街道办事处行政服务大厅', 'house_num' : '2栋202', 'sys_province_id' : 1895,
-                 'sys_city_id' : 1987, 'sys_district_id' : 1990, 'sys_street_code' : 440308001,
-                 'street_code' : 440308001 , 'qd_no' : self.qd_no1}
-        data = form_data
-        # print(url)
-        response = requests.post( url , data, verify = False)
+    def test2_OutputAddressid( self ):
+        '''列出用户服务地址'''
+        url = self.default_url1 + "v2/user/get-address-list?"
+        param = {"access_token" : self.getToken () , "qd_no" : self.qd_no1}
+        response = requests.get( url , param , verify = False )
         r = response.text
-        address_id = json.loads( r )["data"]["id"]
-        print(address_id)
-        with open('addressid.txt','w') as f:
-            f.write(str(address_id))
-        sleep(1)
+        total = len(json.loads(r)["data"])
+        if total==0:
+            def addaddress( self ) :
+                '''用户创建服务地址'''
+                url = self.default_url1 + "v2/user/add-address?" + "qd_no=" + self.qd_no1 + "&district_id=1990&access_token=" + self.getToken ()
+                form_data = {'username' : '研发' + random.choice ( "深圳欢迎您南山宝安福田罗湖龙岗株洲长沙" ) , 'sex' : '' ,
+                             'phone' : self.mobile1 , 'province_id' : 1895 , 'city_id' : 1987 ,
+                             'district_id' : 1990 , 'address' : '梅沙街道办事处行政服务大厅' , 'house_num' : '2栋202' ,
+                             'sys_province_id' : 1895 ,
+                             'sys_city_id' : 1987 , 'sys_district_id' : 1990 , 'sys_street_code' : 440308001 ,
+                             'street_code' : 440308001 , 'qd_no' : self.qd_no1}
+                data = form_data
+                # print(url)
+                response = requests.post( url , data , verify = False )
+                r = response.text
+                address_id = json.loads(r)["data"]["id"]
+                print(address_id)
+
+                with open('addressid.txt' , 'w') as f :
+                    f.write(str(address_id))
+                sleep(1)
+
+        elif total == 1:
+            address_id=json.loads(r)["data"][0]["id"]
+            with open ('addressid.txt', 'w' ) as f :
+                f.write (str(address_id))
+
+        else :
+            a = []
+            for i in range(total):
+                a.append(json.loads(r)["data"][i]["id"])
+                # print(a)
+            url = self.default_url1 + "v2/user/delete-address?" + "qd_no=" + self.qd_no1 + "&district_id=1997&access_token=" + self.getToken ()
+            for b in range(len(a)-1):
+                param = {"access_token" : self.getToken () , "qd_no" : self.qd_no1,"id":a[b],"district_id":1990}
+                response = requests.get( url , param , verify = False )
+            address_id = a[0]
+            with open ('addressid.txt', 'w' ) as f :
+                f.write (str(address_id))
 
     def getAddressid( self ) :
         with open("addressid.txt",'r') as f:
            return f.read()
 
+    def ReadAddressid ( self ) :
+        addressid = self.getAddressid ()
+        print('addressid is '+addressid)
+
     def test3_createorder(self):
-        '''用户购买单次保洁服务商品'''
-        # token = test1_login.login().test2_getToken()
-        # addressid=test2_address.address.test2_getAddressid(self)
+        '''用户购买服务商品'''
         # now_time=datetime.datetime.now()
         # book_day=(now_time+datetime.timedelta(days=+25)).strftime("%Y-%m-%d")#设置预约时间
         addressid = self.getAddressid()
@@ -110,7 +141,7 @@ class JiaDianOrder( Init ):
         '''用户预约上门服务时间'''
         sleep( 2 )
         url = self.default_url1 + '/v2/order/modify-date?access_token=' + self.getToken() + '&qd_no=' + self.qd_no1 + '&district_id=1990'
-        param = {"order_id" : self.getOrderid(), "date" : "2020-07-22" , "time" : "09:00-12:00" , 'type' : "" ,
+        param = {"order_id" : self.getOrderid(), "date" : "2020-07-24" , "time" : "09:00-12:00" , 'type' : "" ,
                  'confirm_type' : "", 'qd_no' : self.qd_no1}
         response = requests.post(url , param, verify = False)
         print (response)

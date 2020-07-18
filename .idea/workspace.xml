@@ -2,14 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d8f5606a-d9db-46dc-b5c4-8eea79d9ddc7" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/testCase/createorder_jiazheng.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/resource.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/resource.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/testCase/test.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/page/init.py" beforeDir="false" afterPath="$PROJECT_DIR$/page/init.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testCase/addressid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/addressid.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testCase/createorder.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/createorder.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/testCase/houtai.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/houtai.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/testCase/createorder_jiazheng.py" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/createorder_jiazheng.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testCase/orderid.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/orderid.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/testCase/token.txt" beforeDir="false" afterPath="$PROJECT_DIR$/testCase/token.txt" afterDir="false" />
     </list>
@@ -24,20 +22,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/page/init.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="400">
-              <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+            <state relative-caret-position="245">
+              <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
               <folding>
                 <element signature="e#66#81#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/testCase/yichangbaofei.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1296">
-              <caret line="88" selection-start-line="88" selection-end-line="89" selection-end-column="32" />
             </state>
           </provider>
         </entry>
@@ -93,11 +82,23 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCase/createorder.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1102">
-              <caret line="112" column="69" selection-start-line="112" selection-start-column="69" selection-end-line="112" selection-end-column="69" />
+            <state relative-caret-position="691">
+              <caret line="122" column="35" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="122" selection-end-column="35" />
+              <folding>
+                <element signature="e#91#106#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/testCase/test.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="253">
+              <caret line="143" column="69" selection-start-line="143" selection-start-column="69" selection-end-line="143" selection-end-column="69" />
               <folding>
                 <element signature="e#91#106#0" expanded="true" />
               </folding>
@@ -108,7 +109,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/testCase/createorder_jiazheng.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="687">
+            <state relative-caret-position="1664">
               <caret line="110" column="69" selection-start-line="110" selection-start-column="69" selection-end-line="110" selection-end-column="69" />
             </state>
           </provider>
@@ -155,16 +156,16 @@
         <option value="$PROJECT_DIR$/testCase/test1_login.py" />
         <option value="$PROJECT_DIR$/testCase/houtai.py" />
         <option value="$PROJECT_DIR$/testCase/createorder_jiazheng.py" />
-        <option value="$PROJECT_DIR$/page/init.py" />
         <option value="$PROJECT_DIR$/testCase/createorder.py" />
+        <option value="$PROJECT_DIR$/page/init.py" />
+        <option value="$PROJECT_DIR$/testCase/test.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="271" />
-    <option name="y" value="38" />
-    <option name="width" value="1936" />
-    <option name="height" value="1100" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-7" />
+    <option name="width" value="1932" />
+    <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -199,7 +200,7 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/testCase" />
-    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.Python" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -218,7 +219,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python tests.Unittests in createorder.py">
+  <component name="RunManager" selected="Python tests.Unittests in test.py">
     <configuration name="houtai" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="resource" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -289,7 +290,7 @@
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
-    <configuration name="Unittests in qingjiadanci.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
+    <configuration name="Unittests in test.py" type="tests" factoryName="Unittests" temporary="true" nameIsGenerated="true">
       <module name="resource" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -299,17 +300,17 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="_new_additionalArguments" value="&quot;&quot;" />
-      <option name="_new_target" value="&quot;$PROJECT_DIR$/testCase/qingjiadanci.py&quot;" />
+      <option name="_new_target" value="&quot;$PROJECT_DIR$/testCase/test.py&quot;" />
       <option name="_new_targetType" value="&quot;PATH&quot;" />
       <method v="2" />
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Python tests.Unittests in createorder.py" />
+        <item itemvalue="Python tests.Unittests in test.py" />
         <item itemvalue="Python tests.Unittests in createorder_jiazheng.py" />
+        <item itemvalue="Python tests.Unittests in createorder.py" />
         <item itemvalue="Python.houtai" />
         <item itemvalue="Python.test1_login" />
-        <item itemvalue="Python tests.Unittests in qingjiadanci.py" />
       </list>
     </recent_temporary>
   </component>
@@ -327,35 +328,35 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="Unittests_in_createorder_jiazheng_py - 2020.07.15 at 14h 51m 28s.xml">
-      <configuration name="Unittests in createorder_jiazheng.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_py - 2020.07.18 at 14h 53m 13s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_createorder_jiazheng_py - 2020.07.15 at 16h 41m 22s.xml">
-      <configuration name="Unittests in createorder_jiazheng.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_py - 2020.07.18 at 14h 53m 30s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_createorder_jiazheng_py - 2020.07.15 at 16h 42m 23s.xml">
-      <configuration name="Unittests in createorder_jiazheng.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_py - 2020.07.18 at 14h 53m 44s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_createorder_jiazheng_py - 2020.07.15 at 16h 47m 00s.xml">
-      <configuration name="Unittests in createorder_jiazheng.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_py - 2020.07.18 at 16h 08m 55s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_createorder_jiazheng_py - 2020.07.15 at 17h 26m 28s.xml">
-      <configuration name="Unittests in createorder_jiazheng.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_py - 2020.07.18 at 16h 30m 55s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_createorder_jiazheng_py - 2020.07.15 at 19h 06m 40s.xml">
-      <configuration name="Unittests in createorder_jiazheng.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_py - 2020.07.18 at 17h 53m 34s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_createorder_jiazheng_py - 2020.07.15 at 19h 07m 05s.xml">
-      <configuration name="Unittests in createorder_jiazheng.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_py - 2020.07.18 at 17h 54m 32s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_createorder_jiazheng_py - 2020.07.16 at 09h 58m 27s.xml">
-      <configuration name="Unittests in createorder_jiazheng.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_py - 2020.07.18 at 17h 59m 24s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_createorder_jiazheng_py - 2020.07.16 at 14h 45m 08s.xml">
-      <configuration name="Unittests in createorder_jiazheng.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_py - 2020.07.18 at 17h 59m 41s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
     </history-entry>
-    <history-entry file="Unittests_in_createorder_jiazheng_py - 2020.07.16 at 15h 01m 51s.xml">
-      <configuration name="Unittests in createorder_jiazheng.py" configurationId="tests" />
+    <history-entry file="Unittests_in_test_py - 2020.07.18 at 18h 00m 19s.xml">
+      <configuration name="Unittests in test.py" configurationId="tests" />
     </history-entry>
   </component>
   <component name="TodoView">
@@ -374,12 +375,12 @@
       <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.13435195" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.329718" />
-      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.37881982" side_tool="true" visible="true" weight="0.637744" />
+      <window_info anchor="bottom" id="Event Log" order="1" sideWeight="0.37987354" side_tool="true" visible="true" weight="0.37310195" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.329718" />
       <window_info anchor="bottom" id="Message" order="3" />
       <window_info anchor="bottom" id="Find" order="4" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.329718" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.6211802" visible="true" weight="0.637744" />
+      <window_info active="true" anchor="bottom" id="Run" order="6" sideWeight="0.6201264" visible="true" weight="0.37310195" />
       <window_info anchor="bottom" id="Debug" order="7" weight="0.46095446" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
@@ -474,6 +475,13 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/testCase/createorder_jiazheng.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1664">
+          <caret line="110" column="69" selection-start-line="110" selection-start-column="69" selection-end-line="110" selection-end-column="69" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/testCase/test6_masterinfo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="128">
@@ -484,27 +492,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/createorder_jiazheng.py">
+    <entry file="file://$PROJECT_DIR$/testCase/createorder.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="687">
-          <caret line="110" column="69" selection-start-line="110" selection-start-column="69" selection-end-line="110" selection-end-column="69" />
+        <state relative-caret-position="691">
+          <caret line="122" column="35" lean-forward="true" selection-start-line="55" selection-start-column="4" selection-end-line="122" selection-end-column="35" />
+          <folding>
+            <element signature="e#91#106#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/page/init.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="400">
-          <caret line="25" lean-forward="true" selection-start-line="25" selection-end-line="25" />
+        <state relative-caret-position="245">
+          <caret line="24" column="20" selection-start-line="24" selection-start-column="20" selection-end-line="24" selection-end-column="20" />
           <folding>
             <element signature="e#66#81#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/testCase/createorder.py">
+    <entry file="file://$PROJECT_DIR$/testCase/test.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1102">
-          <caret line="112" column="69" selection-start-line="112" selection-start-column="69" selection-end-line="112" selection-end-column="69" />
+        <state relative-caret-position="253">
+          <caret line="143" column="69" selection-start-line="143" selection-start-column="69" selection-end-line="143" selection-end-column="69" />
           <folding>
             <element signature="e#91#106#0" expanded="true" />
           </folding>

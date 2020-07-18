@@ -108,7 +108,7 @@ class JiaDianOrder ( Init ) :
         '''用户预约上门服务时间'''
         sleep ( 2 )
         url = self.default_url1 + '/v2/order/modify-date?access_token=' + self.getToken() + '&qd_no=' + self.qd_no1 + '&district_id=1990'
-        param = {"order_id" : self.getOrderid(), "date" : "2020-07-21" , "time" : "09:00-12:00" , 'type' : "" ,
+        param = {"order_id" : self.getOrderid(), "date" : "2020-07-22" , "time" : "09:00-12:00" , 'type' : "" ,
                  'confirm_type' : "", 'qd_no' : self.qd_no1}
         response = requests.post(url , param, verify = False)
         print (response)
